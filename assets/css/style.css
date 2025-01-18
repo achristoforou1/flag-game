@@ -1,4 +1,15 @@
-h1,
-h2 {
-    
+/* Main view setup */
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    margin: 0;
+}
+
+/* Header and footer */
+header {
+    text-align: center;
+    height: 80px;
 }
