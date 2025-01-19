@@ -12,10 +12,16 @@ body {
 header {
     text-align: center;
     height: 80px;
+    border-bottom: darkorange 2px solid;
+    margin-bottom: 0px;
 }
 
 h1 {
-    font-size: 350%;
+    font-size: 380%;
+}
+
+h2 {
+    color: blue;
 }
 
 /* Main content */
@@ -57,6 +63,7 @@ button {
 
 /* Footer */
 .final-score-area {
+    border-top: darkorange 2px solid;
     font-size: xx-large;
     text-align: center;
     
