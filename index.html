@@ -1,52 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- CSS Stylesheet-->
-     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Flag Knowledge Game</title>
 </head>
+
 <body>
     <header>
         <h1>Flag Game</h1>
         <h2>Test you Knowledge by guessing the country and capital city of each flag!</h2>
     </header>
     <!-- Game area -->
-     <main>
+    <main>
         <section class="game-area">
-    <!-- Guess the country -->
+            <!-- Guess the country -->
             <div id="country">
                 <h3>Part One: <strong>COUNTRY?</strong></h3>
                 <h3 id="possible-country">x</h3>
                 <img id="country-image" src="assets/images/255px-Flag_of_the_United_States_(Pantone).svg.png">
                 <div id="country-buttons">
-                    <button>True</button>
-                    <button>False</button>
+                    <button type="button" class="btn btn-outline-true">TRUE</button>
+                    <button type="button" class="btn btn-outline-false">FALSE</button>
                 </div>
                 <div id="country-score">
                     <p><strong>SCORE:</strong></p>
                     <h3 id="country-number">x</h3>
-                    <p>Out of 5</p>
+
                 </div>
             </div>
-    <!-- Guess the capital city -->
+            <!-- Guess the capital city -->
             <div id="capital-city">
                 <h3>Part Two: <strong>CAPITAL CITY?</strong></h3>
                 <h3 id="possible-capital">x</h3>
                 <img id="capital-image" src="assets/images/Flag_of_Greece.svg.png">
                 <div id="capital-buttons">
-                    <button>True</button>
-                    <button>False</button>
+                    <button type="button" class="btn btn-outline-true">TRUE</button>
+                    <button type="button" class="btn btn-outline-false">FALSE</button>
                 </div>
                 <div id="capital-score">
                     <p><strong>SCORE:</strong></p>
                     <h3 id="capital-number">x</h3>
-                    <p>Out of 5</p>
-                </div
-            </div>
-            
+
+                </div </div>
+
         </section>
     </main>
     <footer>
@@ -58,9 +59,10 @@
             <div id="final-score-message">Answer 5 of each to retrieve it!</div>
         </section>
     </footer>
-    
+
 
 
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>

@@ -61,6 +61,20 @@ button {
     height: 50px;
 }
 
+.btn-outline-true {
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    background-color: green;
+}
+
+.btn-outline-false {
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    background-color: red;
+}
+
 /* Footer */
 .final-score-area {
     border-top: darkorange 2px solid;
