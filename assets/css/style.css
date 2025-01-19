@@ -50,6 +50,11 @@ main {
     
 }
 
+button {
+    width: 150px;
+    height: 50px;
+}
+
 /* Footer */
 .final-score-area {
     font-size: xx-large;
