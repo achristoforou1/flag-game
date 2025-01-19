@@ -27,6 +27,7 @@ main {
 .game-area {
     display: flex;
     justify-content: space-evenly;
+    position: relative;
 }
 
 #country-image,
@@ -50,14 +51,8 @@ main {
 }
 
 /* Footer */
-.scores {
-    display: flex;
-    justify-content: space-between;
+.final-score-area {
+    font-size: xx-large;
     text-align: center;
-    display: inline-block;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 50px;
-    height: 500px;
-    min-width: 250px;
+    
 }
