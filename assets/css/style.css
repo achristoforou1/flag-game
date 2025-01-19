@@ -4,24 +4,40 @@ html {
     position: relative;
 }
 
-body {
-    margin: 0;
+.background-image {
+    opacity: 0.1;
 }
+
+
+body {
+    
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    opacity: 1;
+    
+}
+
+
+
 
 /* Header and footer */
 header {
     text-align: center;
     height: 80px;
     border-bottom: darkorange 2px solid;
-    margin-bottom: 0px;
+    
+    
 }
 
 h1 {
     font-size: 380%;
+    text-align: center;
 }
 
 h2 {
-    color: blue;
+   text-align: center;  
+   color: blue;
 }
 
 /* Main content */
@@ -34,6 +50,7 @@ main {
     display: flex;
     justify-content: space-evenly;
     position: relative;
+    
 }
 
 img {
@@ -84,5 +101,7 @@ button {
     border-top: darkorange 2px solid;
     font-size: xx-large;
     text-align: center;
+    
+    margin-bottom: 20px;
     
 }
