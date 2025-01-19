@@ -36,6 +36,10 @@ main {
     position: relative;
 }
 
+img {
+    border: black 2px solid;
+}
+
 #country-image,
 #capital-image {
     height: 200px;
