@@ -24,6 +24,11 @@ main {
     
 }
 
+.game-area {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 #country-image,
 #capital-image {
     height: 200px;
@@ -41,5 +46,18 @@ main {
     margin-top: 50px;
     height: 500px;
     min-width: 250px;
-    max-inline-size: none;
+    
+}
+
+/* Footer */
+.scores {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    display: inline-block;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+    height: 500px;
+    min-width: 250px;
 }
