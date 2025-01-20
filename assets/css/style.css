@@ -99,6 +99,11 @@ button {
 
 /* Footer */
 
+footer {
+    background-color: lightcyan;
+    
+}
+
 .final-score-area {
     text-align: center;
 }
@@ -109,4 +114,12 @@ button {
     color: white;
     background-color: red;
     height: 50px;
+}
+
+h4 {
+    font-size: xx-large;
+}
+
+#final-score-message {
+    font-size: x-large;
 }
