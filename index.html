@@ -20,12 +20,12 @@
     </header>
     <!-- Game area -->
     <main>
-        <button type="button" class="btn btn-outline-start">START GAME</button>
+        <button type="button" class="btn btn-outline-start">START</button>
         <h1>Flag Game</h1>
-        <h2>Test you Knowledge by guessing the country and capital city of each flag!</h2>
-        <section class="game-area">
+        <h2>Test your Knowledge by guessing the country and capital city of each flag!</h2>
+        <div class="game-area row justify-content-center">
             <!-- Guess the country -->
-            <div id="country">
+            <div id="country" class="col-12 text-center">
                 <h3>Part One: <strong>COUNTRY?</strong></h3>
                 <h3 id="possible-country">x</h3>
                 <img id="country-image" src="assets/images/255px-Flag_of_the_United_States_(Pantone).svg.png">
@@ -40,7 +40,7 @@
                 </div>
             </div>
             <!-- Guess the capital city -->
-            <div id="capital-city">
+            <div id="capital-city" class="col-12 text-center">
                 <h3>Part Two: <strong>CAPITAL CITY?</strong></h3>
                 <h3 id="possible-capital">x</h3>
                 <img id="capital-image" src="assets/images/Flag_of_Greece.svg.png">
@@ -54,7 +54,7 @@
 
                 </div 
             </div>
-        </section>
+        </div>
     </main>
     <footer>
        
@@ -64,6 +64,7 @@
                 <strong>FINAL SCORE:</strong>
             </div>
             <div id="final-score-message">Answer 5 of each to retrieve it!</div>
+            <button type="button" class="btn btn-outline-restart">PLAY AGAIN!</button>
         </section>
     </footer>
 

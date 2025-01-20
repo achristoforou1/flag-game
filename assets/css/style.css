@@ -1,3 +1,9 @@
+/* asterisk wildcard selector to override default styles added by the browser */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
 /* Main view setup */
 html {
     min-height: 100%;
@@ -13,7 +19,7 @@ body {
     
     display: flex;
     flex-direction: column;
-    margin: 0;
+    min-height: 100vh;
     
     
 }
@@ -21,7 +27,7 @@ body {
 
 
 
-/* Header and footer */
+/* Header */
 header {
     
     height: 80px;
@@ -30,15 +36,17 @@ header {
     
 }
 
+/* Main */
 h1 {
-    font-size: 380%;
+    font-size: 280%;
     text-align: center;
+    margin-top: 50px;
 }
 
 h2 {
    text-align: center;  
    color: blue;
-   font-size: 200%;
+   font-size: 150%;
 }
 
 /* Main content */
@@ -48,9 +56,8 @@ main {
 }
 
 .game-area {
-    display: flex;
-    justify-content: space-evenly;
-    position: relative;
+    position: fixed;
+    width: 100%;
     
 }
 
@@ -60,36 +67,39 @@ img {
 
 #country-image,
 #capital-image {
-    height: 200px;
-    width: 380px;
+    height: 100px;
+    
+    flex-wrap: wrap;
+    width: 80%;
+
 }
 
 #country,
 #capital-city {
-    display: flex;
-    justify-content: space-evenly;
+    
+    
+    
+    
+}
+
+#country {
     text-align: center;
-    display: inline-block;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 50px;
-    height: 500px;
-    min-width: 250px;
+    position: relative;
     
 }
 
 button {
-    width: 150px;
-    height: 50px;
+    width: 70px;
+    height: 35px;
 }
 
 .btn-outline-start {
     color: white;
     font-weight: bold;
-    font-size: large;
+    font-size: medium;
     background-color: lightgreen;
     float: right;
-    margin-right: 50px;
+    
 }
 
 .btn-outline-true {
@@ -116,4 +126,13 @@ button {
     
     margin-bottom: 20px;
     
+}
+
+.btn-outline-restart {
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    background-color: crimson;
+    float: right;
+    margin-right: 50px;
 }
