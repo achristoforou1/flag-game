@@ -3,136 +3,82 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
-/* Main view setup */
-html {
-    min-height: 100%;
-    position: relative;
 }
-
-.background-image {
-    opacity: 0.1;
-}
-
-
-body {
-    
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    
-    
-}
-
-
-
 
 /* Header */
 header {
+    background-color: lightcyan;
+}
+
+/* World flags image */
+#background-main {
+    margin-left: 30px;
+    padding-top: 0px;
     
+    width: 80%;
     height: 80px;
-    border-bottom: darkorange 2px solid;
+    opacity: 0.7;
+}
+
+/* Gaming area */
+
+.game-area {
     
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     
 }
 
-/* Main */
-h1 {
-    font-size: 280%;
+/* Headings */
+
+h1,
+h2,
+h3 {
     text-align: center;
-    margin-top: 50px;
+}
+
+h1 {
+    color: mediumblue;
+    
 }
 
 h2 {
-   text-align: center;  
-   color: blue;
-   font-size: 150%;
+    font-size: 90%;
 }
 
-/* Main content */
-main {
-    flex: 1 0 auto;
-    
+#heading-part-one,
+#heading-part-two {
+    color: darkgoldenrod
 }
 
-.game-area {
-    position: fixed;
-    width: 100%;
-    
+#background-country {
+    height: 100px;
 }
 
 img {
-    border: black 2px solid;
-}
-
-#country-image,
-#capital-image {
     height: 100px;
-    
-    flex-wrap: wrap;
-    width: 80%;
-
+    width: 190px;
 }
 
-#country,
-#capital-city {
-    
-    
-    
-    
-}
-
-#country {
+#game-one,
+#game-two {
+    width: 280px;
+    margin-left: 40px;
     text-align: center;
-    position: relative;
-    
 }
 
+/* Buttons */
 button {
-    width: 70px;
-    height: 35px;
+    width: 90px;
+    height: 30px;
 }
 
 .btn-outline-start {
-    color: white;
     font-weight: bold;
-    font-size: medium;
+    font-size: large;
+    color: white;
     background-color: lightgreen;
     float: right;
-    
-}
-
-.btn-outline-true {
-    color: white;
-    font-weight: bold;
-    font-size: large;
-    background-color: green;
-}
-
-.btn-outline-false {
-    color: white;
-    font-weight: bold;
-    font-size: large;
-    background-color: red;
-}
-
-
-
-/* Footer */
-.final-score-area {
-    border-top: darkorange 2px solid;
-    font-size: xx-large;
-    text-align: center;
-    
-    margin-bottom: 20px;
-    
-}
-
-.btn-outline-restart {
-    color: white;
-    font-weight: bold;
-    font-size: large;
-    background-color: crimson;
-    float: right;
-    margin-right: 50px;
 }
