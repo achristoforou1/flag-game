@@ -1,12 +1,11 @@
 /** Event listener to load game */
 document.addEventListener("DOMContentLoaded", function() {
 
-    const start = document.getElementById("start");
-    start.addEventListener("click", playGame);
+   
 
     const greece = {
         name: "Greece",
-        capital: "Athens"
+        capital: "Athens",
         flag: "assets/images/Greece.png"
     };
 
@@ -58,4 +57,6 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log(key);
         console.log(cyprus[key]);
     };
+
+    
 });
