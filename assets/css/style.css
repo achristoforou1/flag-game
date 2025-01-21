@@ -123,3 +123,17 @@ h4 {
 #final-score-message {
     font-size: x-large;
 }
+
+/* Media query tablets and larger (768px and up) */
+
+#country,
+#capital-city {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    display: inline-block;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 200px;
+  
+}
