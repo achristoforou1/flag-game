@@ -58,5 +58,60 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log(cyprus[key]);
     };
 
+    const france = {
+        name: "France",
+        capital: "Paris",
+        flag: "assets/images/France.png"
+    };
+
+    for(let key in france) {
+        console.log(key);
+        console.log(france[key]);
+    };
+
+    const germany = {
+        name: "Germany",
+        capital: "Berlin",
+        flag: "assets/images/Germany.png"
+    };
+
+    for(let key in germany) {
+        console.log(key);
+        console.log(germany[key]);
+    };
+
+    const italy = {
+        name: "Italy",
+        capital: "Rome",
+        flag: "assets/images/Italy.webp"
+    };
+
+    for(let key in italy) {
+        console.log(key);
+        console.log(italy[key]);
+    };
+
+    const unitedKingdom = {
+        name: "United Kindom",
+        capital: "London",
+        flag: "assets/images/United_Kingdom.png"
+    };
+
+    for(let key in unitedKingdom) {
+        console.log(key);
+        console.log(unitedKingdom[key]);
+    };
+
+    const usa = {
+        name: "USA",
+        capital: "Washington D.C",
+        flag: "assets/images/USA.png"
+    };
+
+    for(let key in usa) {
+        console.log(key);
+        console.log(usa[key]);
+    };
+
     
 });
