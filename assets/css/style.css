@@ -137,3 +137,16 @@ h4 {
     margin-top: 200px;
   
 }
+
+.game-area {
+    text-align: center;
+}
+
+.head {
+    font-size: x-large;
+}
+
+#start {
+    width: 150px;
+    height: 70px;
+}
