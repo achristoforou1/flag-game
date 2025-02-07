@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function displayGameTwo(countryCapital,countryFlag) {
         document.getElementById('possible-capital').textContent = countryCapital;
-        document.getElementById('country-image').src = countryFlag;
+        document.getElementById('capital-image').src = countryFlag;
     }
 
     displayGameTwo(countryCapital, countryFlag)
