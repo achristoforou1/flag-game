@@ -116,12 +116,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const randomFlag = getRandomFlag()
     console.log(randomFlag)
 
-    function displayGameOne(countryName,countryFlag) {
+    const capitalFlag = randomFlag.flag
+    console.log(capitalFlag)
+
+    function displayGameOne(countryName,capitalFlag) {
         document.getElementById('country').textContent = countryName;
-        document.getElementById('country-image').src = countryFlag;
+        document.getElementById('country-image').src = capitalFlag;
     }
 
-    displayGameOne(countryName, countryFlag)
+    displayGameOne(countryName, capitalFlag)
 
     function displayGameTwo(countryCapital,countryFlag) {
         document.getElementById('possible-capital').textContent = countryCapital;
