@@ -1,117 +1,145 @@
 /** Event listener to load game */
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
+    let buttons = document.getElementsByTagName("button");
 
-   
-
-    const greece = {
-        name: "Greece",
-        capital: "Athens",
-        flag: "assets/images/Greece.png"
-    };
-
-    for(let key in greece) {
-        console.log(key);
-        console.log(greece[key]);
-    };
-
-    const argentina = {
-        name: "Argentina",
-        capital: "Buenos Aires",
-        flag: "assets/images/Argentina.png"
-    };
-
-    for(let key in argentina) {
-        console.log(key);
-        console.log(argentina[key]);
-    };
-
-    const australia = {
-        name: "Australia",
-        capital: "Canberra",
-        flag: "assets/images/Australia.webp"
-    };
-
-    for(let key in australia) {
-        console.log(key);
-        console.log(australia[key]);
-    };
-
-    const brazil = {
-        name: "Brazil",
-        capital: "Rio De Janeiro",
-        flag: "assets/images/Brazil.png"
+    for (let button of buttons) {
+        button.addEventListener("click", function() {
+            if (this.getAttribute("data-type") === "start") {
+                alert("Start game");
+            } else {
+                let gameType = this.getAttribute("data-type");
+                runGame(gameType);
+            }
+        })
     }
 
-    for(let key in brazil) {
-        console.log(key);
-        console.log(brazil[key]);
-    };
+    document.getElementById("country").addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            checkAnswer();
+        }
+    })
 
-    const cyprus = {
-        name: "Cyprus",
-        capital: "Nicosia",
-        flag: "assets/images/Cyprus.png"
-    };
-
-    for(let key in cyprus) {
-        console.log(key);
-        console.log(cyprus[key]);
-    };
-
-    const france = {
-        name: "France",
-        capital: "Paris",
-        flag: "assets/images/France.png"
-    };
-
-    for(let key in france) {
-        console.log(key);
-        console.log(france[key]);
-    };
-
-    const germany = {
-        name: "Germany",
-        capital: "Berlin",
-        flag: "assets/images/Germany.png"
-    };
-
-    for(let key in germany) {
-        console.log(key);
-        console.log(germany[key]);
-    };
-
-    const italy = {
-        name: "Italy",
-        capital: "Rome",
-        flag: "assets/images/Italy.webp"
-    };
-
-    for(let key in italy) {
-        console.log(key);
-        console.log(italy[key]);
-    };
-
-    const unitedKingdom = {
-        name: "United Kindom",
-        capital: "London",
-        flag: "assets/images/United_Kingdom.png"
-    };
-
-    for(let key in unitedKingdom) {
-        console.log(key);
-        console.log(unitedKingdom[key]);
-    };
-
-    const usa = {
-        name: "USA",
-        capital: "Washington D.C",
-        flag: "assets/images/USA.png"
-    };
-
-    for(let key in usa) {
-        console.log(key);
-        console.log(usa[key]);
-    };
+    getRandomCountry("randomCountry");
 
     
 });
+
+    /** All objects with keys and values */
+    const allObjects = [
+        {
+            name: 'Greece',
+            capital: 'Athens',
+            flag: '/assets/images/Greece.png'
+        },
+        {
+            name: "Argentina",
+            capital: "Buenos Aires",
+            flag: "assets/images/Argentina.png"
+        },
+        {
+            name: "Australia",
+            capital: "Canberra",
+            flag: "assets/images/Australia.webp"
+        },
+        {
+            name: "Brazil",
+            capital: "Rio De Janeiro",
+            flag: "assets/images/Brazil.png"
+        },
+        {
+            name: "Cyprus",
+            capital: "Nicosia",
+            flag: "assets/images/Cyprus.png"
+        },
+        {
+            name: "France",
+            capital: "Paris",
+            flag: "assets/images/France.png"
+        },
+        {
+            name: "Germany",
+            capital: "Berlin",
+            flag: "assets/images/Germany.png"
+        },
+        {
+            name: "Italy",
+            capital: "Rome",
+            flag: "assets/images/Italy.webp"
+        },
+        {
+            name: "United Kindom",
+            capital: "London",
+            flag: "assets/images/United_Kingdom.png"
+        },
+        {
+            name: "USA",
+            capital: "Washington D.C",
+            flag: "/assets/images/USA.png"
+        },
+    ];
+
+    /** GAME ONE 
+     Function for random country */
+    function getRandomCountry(gameType) {
+        let randomCountry = allObjects[Math.floor(Math.random() * allObjects.length)]
+        return randomCountry
+    }
+
+    const randomCountry = getRandomCountry()
+    console.log(randomCountry)
+
+    const countryName = randomCountry.name
+    console.log(countryName)
+
+    const countryFlag =randomCountry.flag
+    console.log(countryFlag)
+
+    //* GAME TWO */
+    //* Function for capital citty */
+    function getRandomCapital() {
+        let randomCapital = allObjects[Math.floor(Math.random() * allObjects.length)]
+        return randomCapital
+    }
+
+    const randomCapital = getRandomCapital()
+    console.log(randomCapital)
+
+    const countryCapital = randomCapital.capital
+    console.log(countryCapital)
+
+    //* Funtion for random flag image for both games */
+    function getRandomFlag() {
+        let randomFlag = allObjects[Math.floor(Math.random() * allObjects.length)]
+        return randomFlag
+    }
+
+    const randomFlag = getRandomFlag()
+    console.log(randomFlag)
+
+    function displayGameOne(countryName,countryFlag) {
+        document.getElementById('country').textContent = countryName;
+        document.getElementById('country-image').src = countryFlag;
+    }
+
+    displayGameOne(countryName, countryFlag)
+
+    function displayGameTwo(countryCapital,countryFlag) {
+        document.getElementById('possible-capital').textContent = countryCapital;
+        document.getElementById('country-image').src = countryFlag;
+    }
+
+    displayGameTwo(countryCapital, countryFlag)
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
