@@ -94,8 +94,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const countryFlag =randomCountry.flag
     console.log(countryFlag)
 
-    //* GAME TWO */
-    //* Function for capital citty */
+    /** GAME TWO 
+     Function for capital city */
     function getRandomCapital() {
         let randomCapital = allObjects[Math.floor(Math.random() * allObjects.length)]
         return randomCapital
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const countryCapital = randomCapital.capital
     console.log(countryCapital)
 
-    //* Funtion for random flag image for both games */
+    /** Funtion for random flag image for both games */
     function getRandomFlag() {
         let randomFlag = allObjects[Math.floor(Math.random() * allObjects.length)]
         return randomFlag
@@ -119,6 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const capitalFlag = randomFlag.flag
     console.log(capitalFlag)
 
+    /** Display Game One */
     function displayGameOne(countryName,capitalFlag) {
         document.getElementById('country').textContent = countryName;
         document.getElementById('country-image').src = capitalFlag;
@@ -126,6 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     displayGameOne(countryName, capitalFlag)
 
+    /** Display Game Two */
     function displayGameTwo(countryCapital,countryFlag) {
         document.getElementById('possible-capital').textContent = countryCapital;
         document.getElementById('capital-image').src = countryFlag;
