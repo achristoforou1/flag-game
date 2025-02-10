@@ -1,14 +1,17 @@
 /** Event listener to load game */
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
+    
+    
+
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "start") {
-                alert("Start game");
+                checkAnswer();
             } else {
                 let gameType = this.getAttribute("data-type");
-                runGame(gameType);
+                getRandomCountry(gameType);
             }
         })
     }
@@ -134,6 +137,22 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     displayGameTwo(countryCapital, countryFlag)
+
+    /** Check correct answer Game One */
+    function checkAnwserOne(countryName, capitalFlag) {
+      
+       
+        
+            if (allObjects.name === allObjects.flag) {
+                return true;
+            } else if (allObjects.name !== allObjects.flag) {
+                return false;
+            }
+        
+    }
+    checkAnswerOne()
+
+    
 
  
 
