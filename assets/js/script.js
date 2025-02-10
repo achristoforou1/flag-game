@@ -150,7 +150,19 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         
     }
-    checkAnswerOne()
+    checkAnswerOne(countryName, capitalFlag)
+
+    function incrementScore()
+
+    function incrementWrongAnswer()
+
+    function endOfGameOne()
+
+    function endOfGameTwo()
+
+    function gameRestart()
+
+    function 
 
     
 
