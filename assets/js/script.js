@@ -53,11 +53,13 @@ function getRandomCountry() {
     return allObjects[Math.floor(Math.random() * allObjects.length)];
 }
 
+
+
 /** Show new question in Game 1 */
 function nextRound() {
     if (gameOneCount < 5) {
         currentCountry = getRandomCountry();
-        displayedCountry = getRandomCountry(); // Μπορεί να είναι διαφορετική από τη σημαία
+        displayedCountry = getRandomCountry(); 
 
         document.getElementById('country').textContent = displayedCountry.name;
         document.getElementById('country-image').src = currentCountry.flag;
@@ -95,7 +97,7 @@ function startGameTwo() {
 function nextCapitalRound() {
     if (gameTwoCount < 5) {
         currentCountry = getRandomCountry();
-        displayedCountry = getRandomCountry(); // Μπορεί να είναι διαφορετική από τη σημαία
+        displayedCountry = getRandomCountry(); 
 
         document.getElementById('possible-capital').textContent = displayedCountry.capital;
         document.getElementById('capital-image').src = currentCountry.flag;
@@ -120,7 +122,7 @@ function checkAnswerCapital(userAnswer) {
 /** End of game */
 function endGame() {
     document.getElementById("game-two").style.display = "none";
-    document.querySelector(".final-score-area").style.display = "flex"; // Βεβαιώνεται ότι η flexbox ενεργοποιείται
+    document.querySelector(".final-score-area").style.display = "flex"; 
     
     document.getElementById("final-score-message").textContent = `Your final score is: ${score}`;
     
