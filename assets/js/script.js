@@ -51,7 +51,7 @@
         flag: "/assets/images/USA.png"
     },];
 
-    let playerScoore = 0
+    let playerScore = 0
     let numberOfQuestion = 0
 
     let country1, country2
@@ -62,35 +62,40 @@ document.addEventListener("DOMContentLoaded", function () {
     
     for (let button of buttons) {
         button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "start") {
-                checkAnswer();
+            if (button.id === "true_one") {
+                if (checkAnswerOne(country1, country2)) {
+                    console.log("CORRECT, +1 to Score")
+                    incrementScore()
+                } else {
+                    console.log("INCORRECT, no points")
+                }
+            } else if (button.id === "false_one") {
+                if (checkAnswerOne(country1, country2)) {
+                    console.log("INCORRECT, no points")
+                } else {
+                    console.log("CORRECT, +1 to Score")
+                    incrementScore()
+                }
+            }
+            numberOfQuestion++
+            console.log("Score: " + playerScore)
+            console.log("Questions answered: " + numberOfQuestion)
+
+            console.log("Update Score")
+
+            if (numberOfQuestion < 9) {
+                loadNewQuestion()
             } else {
-                let gameType = this.getAttribute("data-type");
-                getRandomCountry(gameType);
+                const gameArea = document.getElementById("game-area")
+                const finalScoreArea = document.getElementById("final-score-area")
+
+                gameArea.style.display = "none"
+                finalScoreArea.style.display = "block"
             }
         })
     }
-
-    document.getElementById("country").addEventListener("keydown", function(event) {
-        if (event.key === "Enter") {
-            checkAnswer();
-        }
-    })
-
-    getRandomCountry("randomCountry");
-
+});    
     
-});
-
-   
-
-    /** GAME ONE 
-     Function for random country */
-    function getRandomCountry(gameType) {
-        let randomCountry = allObjects[Math.floor(Math.random() * allObjects.length)]
-        return randomCountry
-    }
-
     const randomCountry = getRandomCountry()
     console.log(randomCountry)
 
