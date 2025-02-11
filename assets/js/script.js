@@ -1,10 +1,65 @@
+ /** All objects with keys and values */
+ const allObjects = [
+    {
+        name: 'Greece',
+        capital: 'Athens',
+        flag: '/assets/images/Greece.png'
+    },
+    {
+        name: "Argentina",
+        capital: "Buenos Aires",
+        flag: "assets/images/Argentina.png"
+    },
+    {
+        name: "Australia",
+        capital: "Canberra",
+        flag: "assets/images/Australia.webp"
+    },
+    {
+        name: "Brazil",
+        capital: "Rio De Janeiro",
+        flag: "assets/images/Brazil.png"
+    },
+    {
+        name: "Cyprus",
+        capital: "Nicosia",
+        flag: "assets/images/Cyprus.png"
+    },
+    {
+        name: "France",
+        capital: "Paris",
+        flag: "assets/images/France.png"
+    },
+    {
+        name: "Germany",
+        capital: "Berlin",
+        flag: "assets/images/Germany.png"
+    },
+    {
+        name: "Italy",
+        capital: "Rome",
+        flag: "assets/images/Italy.webp"
+    },
+    {
+        name: "United Kindom",
+        capital: "London",
+        flag: "assets/images/United_Kingdom.png"
+    },
+    {
+        name: "USA",
+        capital: "Washington D.C",
+        flag: "/assets/images/USA.png"
+    },];
+
+    let playerScoore = 0
+    let numberOfQuestion = 0
+
+    let country1, country2
+
 /** Event listener to load game */
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
     
-    
-
-
     for (let button of buttons) {
         button.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "start") {
@@ -27,59 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
 });
 
-    /** All objects with keys and values */
-    const allObjects = [
-        {
-            name: 'Greece',
-            capital: 'Athens',
-            flag: '/assets/images/Greece.png'
-        },
-        {
-            name: "Argentina",
-            capital: "Buenos Aires",
-            flag: "assets/images/Argentina.png"
-        },
-        {
-            name: "Australia",
-            capital: "Canberra",
-            flag: "assets/images/Australia.webp"
-        },
-        {
-            name: "Brazil",
-            capital: "Rio De Janeiro",
-            flag: "assets/images/Brazil.png"
-        },
-        {
-            name: "Cyprus",
-            capital: "Nicosia",
-            flag: "assets/images/Cyprus.png"
-        },
-        {
-            name: "France",
-            capital: "Paris",
-            flag: "assets/images/France.png"
-        },
-        {
-            name: "Germany",
-            capital: "Berlin",
-            flag: "assets/images/Germany.png"
-        },
-        {
-            name: "Italy",
-            capital: "Rome",
-            flag: "assets/images/Italy.webp"
-        },
-        {
-            name: "United Kindom",
-            capital: "London",
-            flag: "assets/images/United_Kingdom.png"
-        },
-        {
-            name: "USA",
-            capital: "Washington D.C",
-            flag: "/assets/images/USA.png"
-        },
-    ];
+   
 
     /** GAME ONE 
      Function for random country */
@@ -133,13 +136,16 @@ document.addEventListener("DOMContentLoaded", function () {
     /** Display Game Two */
     function displayGameTwo(countryCapital,countryFlag) {
         document.getElementById('possible-capital').textContent = countryCapital;
-        document.getElementById('capital-image').src = countryFlag;
+        document.getElementsById('country-image').src = countryFlag;
     }
 
     displayGameTwo(countryCapital, countryFlag)
 
-    /** Check correct answer Game One */
-    function checkAnwserOne(countryName, capitalFlag) {
+    /** Check correct answer*/
+    function checkAnswer(chosenAnswer, correctAnswer) {
+        let chosenAnswer = 
+        let correctAnswer = 
+        var trueBtn = document.getElementById("true_one")
       
        
         
@@ -147,26 +153,36 @@ document.addEventListener("DOMContentLoaded", function () {
                 return true;
             } else if (allObjects.name !== allObjects.flag) {
                 return false;
+            } else if (allObjects.capital === allObjects.flag) {
+                return true;
+            } else (allObjects.capital !== allObjects.flag) {
+                return false;
             }
         
     }
-    checkAnswerOne(countryName, capitalFlag)
+    checkAnswer(chosenAnswer, correctAnswer)
 
+    /** Increment correct score */
     function incrementScore()
 
+
+    /** Increment incorrect score */
     function incrementWrongAnswer()
 
+    /** End of 5 tries for game one */
     function endOfGameOne()
 
+    /** End of 5 tries for game two */
     function endOfGameTwo()
 
+
+    /** Restart game */
     function gameRestart()
 
     function 
 
     
 
- 
 
  
 
