@@ -12,7 +12,9 @@ header {
 }
 
 /* World flags image */
-
+#background-main {
+    margin-left: 40px;
+}
 
 /* Gaming area */
 
