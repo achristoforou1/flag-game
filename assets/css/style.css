@@ -12,9 +12,7 @@ header {
 }
 
 /* World flags image */
-#background-main {
-    
-}
+
 
 /* Gaming area */
 
@@ -104,10 +102,10 @@ footer {
     text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Στοίχιση στο κέντρο */
+    align-items: center; 
     justify-content: center;
-    gap: 15px; /* Προσθέτει απόσταση μεταξύ των στοιχείων */
-    margin-top: 20px; /* Αποτρέπει να κολλάει στα άλλα στοιχεία */
+    gap: 15px; 
+    margin-top: 20px; 
 }
 
 #restart {
@@ -118,13 +116,13 @@ footer {
     color: white;
     background-color: red;
     height: 50px;
-    width: 200px; /* Προαιρετικά, αυξάνει λίγο το πλάτος για καλύτερη εμφάνιση */
+    width: 200px; 
     border-radius: 10px;
     
-    /* Κεντράρισμα του κειμένου μέσα στο κουμπί */
+    
     display: flex;
-    align-items: center; /* Κάθετη στοίχιση */
-    justify-content: center; /* Οριζόντια στοίχιση */
+    align-items: center; 
+    justify-content: center; 
     text-align: center;
 }
 
