@@ -1,168 +1,139 @@
- /** All objects with keys and values */
- const allObjects = [
-    {
-        name: 'Greece',
-        capital: 'Athens',
-        flag: '/assets/images/Greece.png'
-    },
-    {
-        name: "Argentina",
-        capital: "Buenos Aires",
-        flag: "assets/images/Argentina.png"
-    },
-    {
-        name: "Australia",
-        capital: "Canberra",
-        flag: "assets/images/Australia.webp"
-    },
-    {
-        name: "Brazil",
-        capital: "Rio De Janeiro",
-        flag: "assets/images/Brazil.png"
-    },
-    {
-        name: "Cyprus",
-        capital: "Nicosia",
-        flag: "assets/images/Cyprus.png"
-    },
-    {
-        name: "France",
-        capital: "Paris",
-        flag: "assets/images/France.png"
-    },
-    {
-        name: "Germany",
-        capital: "Berlin",
-        flag: "assets/images/Germany.png"
-    },
-    {
-        name: "Italy",
-        capital: "Rome",
-        flag: "assets/images/Italy.webp"
-    },
-    {
-        name: "United Kindom",
-        capital: "London",
-        flag: "assets/images/United_Kingdom.png"
-    },
-    {
-        name: "USA",
-        capital: "Washington D.C",
-        flag: "/assets/images/USA.png"
-    },];
-
-    let playerScore = 0
-    let numberOfQuestion = 0
-
-    let country1, country2
-
-/** Event listener to load game */
+/**  Event listener to load game*/ 
 document.addEventListener("DOMContentLoaded", function () {
-    let buttons = document.getElementsByTagName("button");
-    
-    for (let button of buttons) {
-        button.addEventListener("click", function() {
-            if (button.id === "true_one") {
-                if (checkAnswerOne(country1, country2)) {
-                    console.log("CORRECT, +1 to Score")
-                    displayGameScore()
-                } else {
-                    console.log("INCORRECT, no points")
-                    numberOfQuestion++
-                }
-            } else if (button.id === "false_one") {
-                if (checkAnswerOne(country1, country2)) {
-                    console.log("INCORRECT, no points")
-                } else {
-                    console.log("CORRECT, +1 to Score")
-                    displayGameScore()
-                }
-            }
-            numberOfQuestion++
-            console.log("Score: " + playerScore)
-            console.log("Questions answered: " + numberOfQuestion)
+    document.getElementById("start").addEventListener("click", startGame);
+	document.getElementById("start").addEventListener("click", function () {
+        // Hide START button
+        this.style.display = "none";
 
-            console.log("Update Score")
+        //  Hide Game 2 
+        document.getElementById("game-two").style.display = "none";
 
-            if (numberOfQuestion < 9) {
-                loadNewQuestion()
-            } else {
-                const gameArea = document.getElementById("game-area")
-                const finalScoreArea = document.getElementById("final-score-area")
+        // Show Game 1
+        document.getElementById("game-one").style.display = "block";
+    });
+    document.getElementById("true_one").addEventListener("click", () => checkAnswer(true));
+    document.getElementById("false_one").addEventListener("click", () => checkAnswer(false));
+    document.getElementById("true_two").addEventListener("click", () => checkAnswerCapital(true));
+    document.getElementById("false_two").addEventListener("click", () => checkAnswerCapital(false));
+    document.getElementById("restart").addEventListener("click", restartGame);
+});
 
-                gameArea.style.display = "none"
-                finalScoreArea.style.display = "block"
-            }
-        })
+const allObjects = [
+    { name: 'Greece', capital: 'Athens', flag: 'assets/images/Greece.png' },
+    { name: "Argentina", capital: "Buenos Aires", flag: "assets/images/Argentina.png" },
+    { name: "Australia", capital: "Canberra", flag: "assets/images/Australia.webp" },
+    { name: "Brazil", capital: "Brasilia", flag: "assets/images/Brazil.png" },
+    { name: "Cyprus", capital: "Nicosia", flag: "assets/images/Cyprus.png" },
+    { name: "France", capital: "Paris", flag: "assets/images/France.png" },
+    { name: "Germany", capital: "Berlin", flag: "assets/images/Germany.png" },
+    { name: "Italy", capital: "Rome", flag: "assets/images/Italy.webp" },
+    { name: "United Kingdom", capital: "London", flag: "assets/images/United_Kingdom.png" },
+    { name: "USA", capital: "Washington D.C", flag: "assets/images/USA.png" },
+];
+
+let gameOneCount = 0;
+let gameTwoCount = 0;
+let score = 0;
+let currentCountry;
+let displayedCountry;
+
+/** Start Game */
+function startGame() {
+    gameOneCount = 0;
+    gameTwoCount = 0;
+    score = 0;
+    document.getElementById("country-number").textContent = score;
+    document.getElementById("capital-number").textContent = score;
+    document.querySelector(".final-score-area").style.display = "none";
+    nextRound();
+}
+
+/** Random Country */
+function getRandomCountry() {
+    return allObjects[Math.floor(Math.random() * allObjects.length)];
+}
+
+/** Show new question in Game 1 */
+function nextRound() {
+    if (gameOneCount < 5) {
+        currentCountry = getRandomCountry();
+        displayedCountry = getRandomCountry(); // Μπορεί να είναι διαφορετική από τη σημαία
+
+        document.getElementById('country').textContent = displayedCountry.name;
+        document.getElementById('country-image').src = currentCountry.flag;
+    } else {
+        startGameTwo();
     }
-});    
-    
-   /** GAME ONE
- Function for random country */
-function getRandomCountry(gameType) {
-    let randomCountry = allObjects[Math.floor(Math.random() * allObjects.length)]
-    return randomCountry
 }
 
+/** Checks answer in Game 1 */
+function checkAnswer(userAnswer) {
+    const correctAnswer = currentCountry.name === displayedCountry.name;
 
-/** Display Game One */
-function displayGameOne(countryName, capitalFlag) {
-    document.getElementById('country').textContent = countryName;
-    document.getElementById('country-image').src = capitalFlag;
-}
-
-
-/** Check correct answer Game One */
-function checkAnswerOne(country1, country2) {
-    return country1.name === country2.name
-}
-
-function incrementScore() {
-    playerScore++
-}
-
-function incrementWrongAnswer() {
-}
-
-/** Display Game Score */
-function displayGameScore () {
-    document.getElementById('country-number').textContent = playerScore + 1;
-    return ++ playerScore
-}
-
-function endOfGameOne() {
-}
-
-function endOfGameTwo() {
-}
-
-function gameRestart() {
-}
-
-function loadNewQuestion() {
-    country1 = getRandomCountry()
-    country2 = country1
-
-    if (Math.random() < 0.5) {
-        while (country2.name === country1.name) {
-            country2 = getRandomCountry()
-        }
+    if (userAnswer === correctAnswer) {
+        score++;
+        document.getElementById("country-number").textContent = score;
     }
 
-    displayGameOne(country1.name, country2.flag)
+    gameOneCount++;
+    nextRound();
 }
 
-loadNewQuestion()
+/**  Game 2 Start */
+function startGameTwo() {
+    document.getElementById("game-one").style.display = "none";
+    document.getElementById("game-two").style.display = "block";
+
+    // Brings score from Game one onto Game 2
+    document.getElementById("capital-number").textContent = score;
+
+    nextCapitalRound();
+}
 
 
- 
+/** New question for Game 2 */
+function nextCapitalRound() {
+    if (gameTwoCount < 5) {
+        currentCountry = getRandomCountry();
+        displayedCountry = getRandomCountry(); // Μπορεί να είναι διαφορετική από τη σημαία
 
+        document.getElementById('possible-capital').textContent = displayedCountry.capital;
+        document.getElementById('capital-image').src = currentCountry.flag;
+    } else {
+        endGame();
+    }
+}
 
+/** Checks answer in Game 2 */
+function checkAnswerCapital(userAnswer) {
+    const correctAnswer = currentCountry.capital === displayedCountry.capital;
 
+    if (userAnswer === correctAnswer) {
+        score++;
+        document.getElementById("capital-number").textContent = score;
+    }
 
+    gameTwoCount++;
+    nextCapitalRound();
+}
 
+/** End of game */
+function endGame() {
+    document.getElementById("game-two").style.display = "none";
+    document.querySelector(".final-score-area").style.display = "flex"; // Βεβαιώνεται ότι η flexbox ενεργοποιείται
+    
+    document.getElementById("final-score-message").textContent = `Your final score is: ${score}`;
+    
+    // Button show after a small timeout
+    setTimeout(() => {
+        document.getElementById("restart").style.display = "block";
+    }, 200);
+}
 
-
-
-
-
+/** restart the game*/
+function restartGame() {
+    document.getElementById("game-one").style.display = "block";
+    document.getElementById("game-two").style.display = "none";
+    document.querySelector(".final-score-area").style.display = "none";
+    startGame();
+}

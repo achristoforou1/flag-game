@@ -14,6 +14,7 @@
     
     <header class="head">
         <div>
+            <button type="button" id="start" class="btn btn-outline-start" data-type="start">START</button>
             <h1>Flag Game</h1>
             <h2>Test your Knowledge by guessing the country and capital city of each flag!</h2> 
         </div> 
@@ -35,8 +36,8 @@
                     <!-- Random flag -->
                     <img id="country-image" src="assets/images/Argentina.png">
                     <div id="countrybuttons">
-                        <button type="button" id="true_one" class="btn btn-outline-true">TRUE</button>
-                        <button type="button" id="false_one" class="btn btn-outline-false">FALSE</button>
+                        <button type="button" id="true_one" class="btn btn-outline-true" data-type="true_one">TRUE</button>
+						<button type="button" id="false_one" class="btn btn-outline-false" data-type="false_one">FALSE</button>
                     </div>
                     <div id="country-score">
                         <p><strong>SCORE:</strong></p>
@@ -51,10 +52,11 @@
                 <div id="game-two" class="col-12 text-center">
                     <h3 id="heading-part-two">Part Two: <strong>CAPITAL CITY?</strong></h3>
                     <h3 id="possible-capital"></h3>
-                    <img id="capital-image" src="assets/images/Greece.png">
+                    <img id="capital-image" src="assets/images/Australia.webp">
                     <div id="capital-buttons">
-                        <button type="button" id="true_two" class="btn btn-outline-true">TRUE</button>
-                        <button type="button" id="false_two" class="btn btn-outline-false">FALSE</button>
+                        <button type="button" id="true_two" class="btn btn-outline-true" data-type="true_two">TRUE</button>
+						<button type="button" id="false_two" class="btn btn-outline-false" data-type="false_two">FALSE</button>
+
                     </div>
                     <div id="capital-score">
                         <p><strong>SCORE:</strong></p>
@@ -72,13 +74,14 @@
                 <h4><strong>FINAL SCORE:</strong></h4>
             </div>
             <div id="final-score-message">Answer 5 of each to retrieve it!</div>
-            <button type="button" id="restart" class="btn btn-outline-restart">PLAY AGAIN!</button>
+            <button type="button" id="restart" style="display: none;" class="btn btn-outline-restart" data-type="restart">PLAY AGAIN!  </button>
         </section>
     </footer>
 
 
 
     <script src="assets/js/script.js"></script>
+
 </body>
 
 </html>

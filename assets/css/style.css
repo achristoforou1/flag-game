@@ -102,7 +102,33 @@ footer {
 
 .final-score-area {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Στοίχιση στο κέντρο */
+    justify-content: center;
+    gap: 15px; /* Προσθέτει απόσταση μεταξύ των στοιχείων */
+    margin-top: 20px; /* Αποτρέπει να κολλάει στα άλλα στοιχεία */
 }
+
+#restart {
+    display: none;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: large;
+    color: white;
+    background-color: red;
+    height: 50px;
+    width: 200px; /* Προαιρετικά, αυξάνει λίγο το πλάτος για καλύτερη εμφάνιση */
+    border-radius: 10px;
+    
+    /* Κεντράρισμα του κειμένου μέσα στο κουμπί */
+    display: flex;
+    align-items: center; /* Κάθετη στοίχιση */
+    justify-content: center; /* Οριζόντια στοίχιση */
+    text-align: center;
+}
+
+
 
 .btn-outline-restart {
     font-weight: bold;
@@ -111,6 +137,8 @@ footer {
     background-color: red;
     height: 50px;
 }
+
+
 
 h4 {
     font-size: xx-large;
