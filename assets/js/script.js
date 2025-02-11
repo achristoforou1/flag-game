@@ -65,16 +65,17 @@ document.addEventListener("DOMContentLoaded", function () {
             if (button.id === "true_one") {
                 if (checkAnswerOne(country1, country2)) {
                     console.log("CORRECT, +1 to Score")
-                    incrementScore()
+                    displayGameScore()
                 } else {
                     console.log("INCORRECT, no points")
+                    numberOfQuestion++
                 }
             } else if (button.id === "false_one") {
                 if (checkAnswerOne(country1, country2)) {
                     console.log("INCORRECT, no points")
                 } else {
                     console.log("CORRECT, +1 to Score")
-                    incrementScore()
+                    displayGameScore()
                 }
             }
             numberOfQuestion++
@@ -96,97 +97,62 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });    
     
-    const randomCountry = getRandomCountry()
-    console.log(randomCountry)
+   /** GAME ONE
+ Function for random country */
+function getRandomCountry(gameType) {
+    let randomCountry = allObjects[Math.floor(Math.random() * allObjects.length)]
+    return randomCountry
+}
 
-    const countryName = randomCountry.name
-    console.log(countryName)
 
-    const countryFlag =randomCountry.flag
-    console.log(countryFlag)
+/** Display Game One */
+function displayGameOne(countryName, capitalFlag) {
+    document.getElementById('country').textContent = countryName;
+    document.getElementById('country-image').src = capitalFlag;
+}
 
-    /** GAME TWO 
-     Function for capital city */
-    function getRandomCapital() {
-        let randomCapital = allObjects[Math.floor(Math.random() * allObjects.length)]
-        return randomCapital
+
+/** Check correct answer Game One */
+function checkAnswerOne(country1, country2) {
+    return country1.name === country2.name
+}
+
+function incrementScore() {
+    playerScore++
+}
+
+function incrementWrongAnswer() {
+}
+
+/** Display Game Score */
+function displayGameScore () {
+    document.getElementById('country-number').textContent = playerScore + 1;
+    return ++ playerScore
+}
+
+function endOfGameOne() {
+}
+
+function endOfGameTwo() {
+}
+
+function gameRestart() {
+}
+
+function loadNewQuestion() {
+    country1 = getRandomCountry()
+    country2 = country1
+
+    if (Math.random() < 0.5) {
+        while (country2.name === country1.name) {
+            country2 = getRandomCountry()
+        }
     }
 
-    const randomCapital = getRandomCapital()
-    console.log(randomCapital)
+    displayGameOne(country1.name, country2.flag)
+}
 
-    const countryCapital = randomCapital.capital
-    console.log(countryCapital)
-
-    /** Funtion for random flag image for both games */
-    function getRandomFlag() {
-        let randomFlag = allObjects[Math.floor(Math.random() * allObjects.length)]
-        return randomFlag
-    }
-
-    const randomFlag = getRandomFlag()
-    console.log(randomFlag)
-
-    const capitalFlag = randomFlag.flag
-    console.log(capitalFlag)
-
-    /** Display Game One */
-    function displayGameOne(countryName,capitalFlag) {
-        document.getElementById('country').textContent = countryName;
-        document.getElementById('country-image').src = capitalFlag;
-    }
-
-    displayGameOne(countryName, capitalFlag)
-
-    /** Display Game Two */
-    function displayGameTwo(countryCapital,countryFlag) {
-        document.getElementById('possible-capital').textContent = countryCapital;
-        document.getElementsById('country-image').src = countryFlag;
-    }
-
-    displayGameTwo(countryCapital, countryFlag)
-
-    /** Check correct answer*/
-    function checkAnswer(chosenAnswer, correctAnswer) {
-        let chosenAnswer = 
-        let correctAnswer = 
-        var trueBtn = document.getElementById("true_one")
-      
-       
-        
-            if (allObjects.name === allObjects.flag) {
-                return true;
-            } else if (allObjects.name !== allObjects.flag) {
-                return false;
-            } else if (allObjects.capital === allObjects.flag) {
-                return true;
-            } else (allObjects.capital !== allObjects.flag) {
-                return false;
-            }
-        
-    }
-    checkAnswer(chosenAnswer, correctAnswer)
-
-    /** Increment correct score */
-    function incrementScore()
-
-
-    /** Increment incorrect score */
-    function incrementWrongAnswer()
-
-    /** End of 5 tries for game one */
-    function endOfGameOne()
-
-    /** End of 5 tries for game two */
-    function endOfGameTwo()
-
-
-    /** Restart game */
-    function gameRestart()
-
-    function 
-
-    
+loadNewQuestion()
 
 
  
