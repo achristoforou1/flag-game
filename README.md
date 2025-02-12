@@ -85,3 +85,14 @@ This issue was resolved after checking the code and amending the missing attribu
 
 The live link can be found here - https://achristoforou1.github.io/flag-game/
 
+## Credits 
+
+ ### Content 
+
+ - The code to genrate the random functions and conditional logic along with event listeners was assissted by my mentor, tutor support, research on google, slack overflow and youtube videos.
+- The code for the game was also taken in part from the CI Love Maths project.
+- Bootstrap was used for the game buttons.
+
+### Media
+
+- The images in the game area of the flags were taken from Wikipedia.
