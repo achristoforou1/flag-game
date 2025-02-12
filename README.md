@@ -26,7 +26,7 @@ Part two is very similar but instead of a country as an option the capital city 
  - There is a total of 5 questions on each part for the completion of the game.
  - The individual scores appear at the time separately for both games under the flags.
 
-  ![Game area screenshot](assets/images/game_area_screenshot.png)
+  ![Game area screenshot](/assets/images/game_area_screenshot.png)
 
  - __The Final Score Area__
 
@@ -35,13 +35,53 @@ Part two is very similar but instead of a country as an option the capital city 
  - A play again button which restarts the game.
  - This section disappears again upon the game restarting.
 
- ![Final score area screenshot](assets/images/final_score_area.png)
+ ![Final score area screenshot](/assets/images/final_score_area.png)
 
  - __The Footer__
 
  - This area is also the final score area.
  - Initially when the game loads however and before the start button is pressed it consists of a title that shows that this is where the final score will be displayed along with instructions on how many answers are required to acheive the final score.
 
- ![Footer area screenshot](assets/images/footer_screenshot.png)
+ ![Footer area screenshot](/assets/images/footer_screenshot.png)
 
- 
+ ### Features Left to Implement
+
+ - Addition of more flags and countries.
+
+ ## Testing
+
+ When I copied and pasted my index.html and script.js from another file which i'd written the latter part of my code accidentally many arrors appeared with closing tags.
+This issue initiated mainly with the confusion of the migration of the ide to vs code and the many tabs and windows I had opened at the time trying to figure out how to do the migration mid-project.
+This issue was resolved after checking the code and amending the missing attributes.
+
+### Validator Testing 
+
+- HTML
+ - No errors were returned when passing through the official W3C validator
+ - The warnings that appear in the screenshot are only because within those heading sections is where the random country and capital city appears upon initiation of the games.
+ ![W3C Validator html](/assets/images/html_checker.png)
+- CSS
+ - No errors were found when passing through the official Jigsaw validator.
+ - [W3C CSS validator](/assets/images/css_validator.png)
+- JavaScript
+ - No errors were found when passing through the official Jshint validator
+ - The following metrics were returned:
+  - There are 17 functions in this file.
+  - Function with the largest signature takes 1 argument, while the median is 0.
+  - Largest function has 7 statements in it, while the median is 4.
+  - The most complex function has a cyclomatic complexity value of 2 while the median is 1. 
+ - [JavaScript validator jshint](/assets/images/java_validator.png) 
+
+
+ ### Unfixed Bugs
+ - There are no unfixed bugs.
+
+ ## Deployment
+
+- The site was deployed to GitHub pages. The steps to deploy are as follows.
+  - In the GitHub repository, navigate to the Settings tab 
+  - From the source section drop-down menu, select the Master Branch
+  - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
+
+The live link can be found here - https://achristoforou1.github.io/flag-game/
+
