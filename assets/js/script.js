@@ -19,16 +19,16 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const allObjects = [
-    { name: 'Greece', capital: 'Athens', flag: 'assets/images/Greece.png' },
-    { name: "Argentina", capital: "Buenos Aires", flag: "assets/images/Argentina.png" },
-    { name: "Australia", capital: "Canberra", flag: "assets/images/Australia.webp" },
-    { name: "Brazil", capital: "Brasilia", flag: "assets/images/Brazil.png" },
-    { name: "Cyprus", capital: "Nicosia", flag: "assets/images/Cyprus.png" },
-    { name: "France", capital: "Paris", flag: "assets/images/France.png" },
-    { name: "Germany", capital: "Berlin", flag: "assets/images/Germany.png" },
-    { name: "Italy", capital: "Rome", flag: "assets/images/Italy.webp" },
-    { name: "United Kingdom", capital: "London", flag: "assets/images/United_Kingdom.png" },
-    { name: "USA", capital: "Washington D.C", flag: "assets/images/USA.png" },
+    { name: 'Greece', capital: 'Athens', flag: 'assets/images/greece.png' },
+    { name: "Argentina", capital: "Buenos Aires", flag: "assets/images/argentina.png" },
+    { name: "Australia", capital: "Canberra", flag: "assets/images/australia.webp" },
+    { name: "Brazil", capital: "Brasilia", flag: "assets/images/brazil.png" },
+    { name: "Cyprus", capital: "Nicosia", flag: "assets/images/cyprus.png" },
+    { name: "France", capital: "Paris", flag: "assets/images/france.png" },
+    { name: "Germany", capital: "Berlin", flag: "assets/images/germany.png" },
+    { name: "Italy", capital: "Rome", flag: "assets/images/italy.webp" },
+    { name: "United Kingdom", capital: "London", flag: "assets/images/united_kingdom.png" },
+    { name: "USA", capital: "Washington D.C", flag: "assets/images/usa.png" },
 ];
 
 let gameOneCount = 0;
