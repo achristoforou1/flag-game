@@ -62,7 +62,7 @@ This issue was resolved after checking the code and amending the missing attribu
  ![W3C Validator html](/assets/images/html_checker.png)
 - CSS
  - No errors were found when passing through the official Jigsaw validator.
- - [W3C CSS validator](/assets/images/css_validator.png)
+ - ![W3C CSS validator screenshot](/assets/images/css_validator.png)
 - JavaScript
  - No errors were found when passing through the official Jshint validator
  - The following metrics were returned:
@@ -70,7 +70,7 @@ This issue was resolved after checking the code and amending the missing attribu
   - Function with the largest signature takes 1 argument, while the median is 0.
   - Largest function has 7 statements in it, while the median is 4.
   - The most complex function has a cyclomatic complexity value of 2 while the median is 1. 
- - [JavaScript validator jshint](/assets/images/java_validator.png) 
+ - ![JavaScript validator jshint screenshot](/assets/images/java_validator.png) 
 
 
  ### Unfixed Bugs
