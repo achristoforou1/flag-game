@@ -23,6 +23,7 @@ Part two is very similar but instead of a country as an option the capital city 
  - This section will allow the user to test his knowledge of national flags.
  - In part one the user is required consecutively compare from the flag and country that appears and choose true or false.
  - In part two the flag appears with a capital city and the user again must choose true or false.
+ - Upon pressing the start button game two is hidden along with the final score area using functions in JavaScript and upon completion of game one game two will appear and game one is hidden. Once both games are completed they are both hidden and the final score area appears.
  - There is a total of 5 questions on each part for the completion of the game.
  - The individual scores appear at the time separately for both games under the flags.
 
