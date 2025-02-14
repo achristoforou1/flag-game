@@ -108,7 +108,16 @@ function startGameTwo() {
 function nextCapitalRound() {
     if (gameTwoCount < 5) {
         currentCountry = getRandomCountry();
-        displayedCountry = getRandomCountry(); 
+        displayedCountry = currentCountry; 
+
+        currentCountry = getRandomCountry();
+        displayedCountry = currentCountry
+
+        if (Math.random() < 0.5) {
+            while (displayedCountry.name === currentCountry.name) {
+                displayedCountry = getRandomCountry()
+            }
+        }
 
         document.getElementById('possible-capital').textContent = displayedCountry.capital;
         document.getElementById('capital-image').src = currentCountry.flag;
