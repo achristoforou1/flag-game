@@ -59,7 +59,16 @@ function getRandomCountry() {
 function nextRound() {
     if (gameOneCount < 5) {
         currentCountry = getRandomCountry();
-        displayedCountry = getRandomCountry(); 
+        displayedCountry = currentCountry; 
+
+        currentCountry = getRandomCountry();
+        displayedCountry = currentCountry
+
+        if (Math.random() < 0.5) {
+            while (displayedCountry.name === currentCountry.name) {
+                displayedCountry = getRandomCountry()
+            }
+        }
 
         document.getElementById('country').textContent = displayedCountry.name;
         document.getElementById('country-image').src = currentCountry.flag;
