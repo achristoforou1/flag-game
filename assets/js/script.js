@@ -1,5 +1,7 @@
 /**  Event listener to load game*/ 
 document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("game-one").style.display = "none";
+    document.getElementById("game-two").style.display = "none";
     document.getElementById("start").addEventListener("click", startGame);
 	document.getElementById("start").addEventListener("click", function () {
         // Hide START button
